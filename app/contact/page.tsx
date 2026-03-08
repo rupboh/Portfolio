@@ -140,7 +140,7 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
             >
-              Message sent successfully! I'll get back to you soon.
+              Message sent successfully! I&aposll get back to you soon.
             </motion.div>
           )}
         </motion.form>
@@ -175,3 +175,4 @@ export default function Contact() {
     </motion.section>
   );
 }
+
