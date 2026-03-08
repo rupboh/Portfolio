@@ -49,7 +49,7 @@ export default function Home() {
           className="text-5xl md:text-7xl font-bold text-light-900 mb-6"
           variants={itemVariants}
         >
-          Hi, I'm <span className="text-primary">Rupal Bohra</span>
+          Hi, II&apos;m <span className="text-primary">Rupal Bohra</span>
         </motion.h1>
 
         <motion.p
@@ -95,3 +95,4 @@ export default function Home() {
     </motion.section>
   );
 }
+
