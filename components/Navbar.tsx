@@ -6,6 +6,9 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH;
+  const basePath = rawBasePath && rawBasePath !== "undefined" ? rawBasePath : "";
+  const resumeHref = `${basePath}/resume.pdf`;
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -39,13 +42,13 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
           ))}
-          <Link
-            href="/resume.pdf"
+          <a
+            href={resumeHref}
             download="Rupal_Bohra_Resume.pdf"
             className="px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition-colors text-sm"
           >
             Resume
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -78,14 +81,14 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="/resume.pdf"
+            <a
+              href={resumeHref}
               download="Rupal_Bohra_Resume.pdf"
               className="px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition-colors text-center"
               onClick={() => setIsOpen(false)}
             >
               Download Resume
-            </Link>
+            </a>
           </div>
         </motion.div>
       )}

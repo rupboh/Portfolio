@@ -6,6 +6,11 @@ import Image from "next/image";
 
 
 export default function Home() {
+  const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH;
+  const basePath = rawBasePath && rawBasePath !== "undefined" ? rawBasePath : "";
+  const profileSrc = `${basePath}/profile.jpg`;
+  const resumeHref = `${basePath}/resume.pdf`;
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -40,7 +45,7 @@ export default function Home() {
         >
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
             <Image
-              src="/profile.jpg"
+              src={profileSrc}
               alt="Rupal Bohra"
               width={160}
               height={160}
@@ -68,13 +73,13 @@ export default function Home() {
           className="flex gap-4 justify-center flex-wrap mb-12"
           variants={itemVariants}
         >
-          <Link
-            href="/resume.pdf"
+          <a
+            href={resumeHref}
             download="Rupal_Bohra_Resume.pdf"
             className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-secondary transition-colors inline-flex items-center gap-2"
           >
             📥 Download Resume
-          </Link>
+          </a>
           <Link
             href="/contact"
             className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors"
