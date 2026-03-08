@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+
 
 export default function Home() {
   const containerVariants = {
@@ -37,7 +39,7 @@ export default function Home() {
           variants={itemVariants}
         >
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
-            <img
+            <Image
               src="/profile.jpg"
               alt="Rupal Bohra"
               className="w-full h-full object-cover"
@@ -95,4 +97,5 @@ export default function Home() {
     </motion.section>
   );
 }
+
 
