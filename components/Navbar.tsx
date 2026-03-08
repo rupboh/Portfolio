@@ -39,13 +39,13 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
           ))}
-          <a
+          <Link
             href="/resume.pdf"
             download="Rupal_Bohra_Resume.pdf"
             className="px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition-colors text-sm"
           >
             Resume
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -78,17 +78,18 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <a
+            <Link
               href="/resume.pdf"
               download="Rupal_Bohra_Resume.pdf"
               className="px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition-colors text-center"
               onClick={() => setIsOpen(false)}
             >
               Download Resume
-            </a>
+            </Link>
           </div>
         </motion.div>
       )}
     </motion.nav>
   );
 }
+
