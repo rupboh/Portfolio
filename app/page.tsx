@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/Image";
 
 
 export default function Home() {
@@ -65,13 +65,13 @@ export default function Home() {
           className="flex gap-4 justify-center flex-wrap mb-12"
           variants={itemVariants}
         >
-          <a
+          <Link
             href="/resume.pdf"
             download="Rupal_Bohra_Resume.pdf"
             className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-secondary transition-colors inline-flex items-center gap-2"
           >
             📥 Download Resume
-          </a>
+          </Link>
           <Link
             href="/contact"
             className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors"
@@ -97,5 +97,6 @@ export default function Home() {
     </motion.section>
   );
 }
+
 
 
