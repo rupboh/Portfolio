@@ -40,7 +40,7 @@ export default function Home() {
         >
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
             <Image
-              src="/profile.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/profile.jpg`}
               alt="Rupal Bohra"
               width={160}
               height={160}
@@ -100,6 +100,7 @@ export default function Home() {
     </motion.section>
   );
 }
+
 
 
 
