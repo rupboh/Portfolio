@@ -6,8 +6,7 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH;
-  const basePath = rawBasePath && rawBasePath !== "undefined" ? rawBasePath : "";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const resumeHref = `${basePath}/resume.pdf`;
 
   const navItems = [

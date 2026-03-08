@@ -1,9 +1,6 @@
 import type { NextConfig } from "next";
 
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repository = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
-const isUserPageRepo = repository.endsWith(".github.io");
-const repoBasePath = isGithubActions && !isUserPageRepo ? `/${repository}` : "";
+const repoBasePath = process.env.NODE_ENV === "production" ? "/Portfolio" : "";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -11,7 +8,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   basePath: repoBasePath,
   assetPrefix: repoBasePath,
-   env: {
+  env: {
     NEXT_PUBLIC_BASE_PATH: repoBasePath,
   },
   images: {

@@ -6,8 +6,7 @@ import Image from "next/image";
 
 
 export default function Home() {
-  const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH;
-  const basePath = rawBasePath && rawBasePath !== "undefined" ? rawBasePath : "";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const profileSrc = `${basePath}/profile.jpg`;
   const resumeHref = `${basePath}/resume.pdf`;
 
