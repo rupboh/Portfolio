@@ -42,6 +42,9 @@ export default function Home() {
             <Image
               src="/profile.jpg"
               alt="Rupal Bohra"
+              width={160}
+              height={160}
+              priority
               className="w-full h-full object-cover"
             />
           </div>
@@ -97,6 +100,7 @@ export default function Home() {
     </motion.section>
   );
 }
+
 
 
 
