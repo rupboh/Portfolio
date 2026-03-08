@@ -1,4 +1,4 @@
-# Rupal Bohra - Portfolio Website
+# Rupal Bohra - Portfolio 
 
 A modern, responsive portfolio website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion animations.
 
@@ -153,3 +153,4 @@ This project is open source and available under the MIT License.
 ---
 
 Made with ❤️ using Next.js and Tailwind CSS
+
