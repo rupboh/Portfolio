@@ -2,11 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 
 
 export default function Home() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const basePath = process.env.NODE_ENV === "production" ? "/Portfolio" : "";
   const profileSrc = `${basePath}/profile.jpg`;
   const resumeHref = `${basePath}/resume.pdf`;
 
@@ -43,12 +42,9 @@ export default function Home() {
           variants={itemVariants}
         >
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
-            <Image
+            <img
               src={profileSrc}
               alt="Rupal Bohra"
-              width={160}
-              height={160}
-              priority
               className="w-full h-full object-cover"
             />
           </div>
