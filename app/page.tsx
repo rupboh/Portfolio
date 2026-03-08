@@ -40,7 +40,7 @@ export default function Home() {
         >
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/profile.jpg`}
+              src="/profile.jpg"
               alt="Rupal Bohra"
               width={160}
               height={160}
@@ -54,7 +54,7 @@ export default function Home() {
           className="text-5xl md:text-7xl font-bold text-light-900 mb-6"
           variants={itemVariants}
         >
-          Hi, II&apos;m <span className="text-primary">Rupal Bohra</span>
+          Hi, I&apos;m <span className="text-primary">Rupal Bohra</span>
         </motion.h1>
 
         <motion.p
